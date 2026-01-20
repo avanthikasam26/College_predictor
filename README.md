@@ -40,18 +40,6 @@ The College Predictor Web App helps students quickly find relevant colleges usin
 
 ---
 
-## 📂 Dataset
-
-The app uses the following CSV file:
-
-```
-Indian_Engineering_Colleges_Dataset.csv
-```
-
-Make sure this file is present in the root directory.
-
----
-
 ## 📌 Example Use Cases
 
 * Students searching for colleges in a specific state
