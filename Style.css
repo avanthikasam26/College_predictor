@@ -1,0 +1,179 @@
+/* Apply border-box model to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles - Set the entire background to pale green */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6ffe6; /* Pale green background */
+    color: #2c3e50;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Heading Style */
+h1 {
+    font-size: 3.5rem;
+    color: #006400; /* Dark green color */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Secondary heading style */
+h2 {
+    font-size: 2.2rem;
+    color: #006400; /* Dark green color */
+    margin-bottom: 25px;
+}
+
+/* Form Layout and Label Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Input field Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #006400; /* Focus color to match headings */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #006400; /* Dark green button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d00; /* Darker green for hover effect */
+    transform: scale(1.1); /* Hover effect */
+}
+
+/* "College Predictor" Button or Text */
+#predictor-button, .predictor-text {
+    color: white;
+    background-color: #27ae60; /* Green button */
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+#predictor-button:hover, .predictor-text:hover {
+    background-color: #2ecc71; /* Lighter green on hover */
+    transform: scale(1.05); /* Hover effect */
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #006400; /* Dark green header */
+    color: white;
+    font-size: 1.1rem;
+}
+
+td {
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Styling for no results message */
+p {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for the search result summary */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ul li {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 12px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], button {
+        font-size: 1rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+}

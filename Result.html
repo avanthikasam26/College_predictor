@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>College Search Results</h1>
+        <h2>Your Search</h2>
+        <ul>
+            <li>College Name: {{ user['College_Name'] }}</li>
+            <li>State: {{ user['State'] }}</li>
+        </ul>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <h2>Matching Colleges: ({{ colleges|length }})</h2>
+        
+        {% if colleges %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>College Name</th>
+                        <th>State</th>
+                        <th>UG Fee</th>
+                        <th>PG Fee</th>
+                        <th>Rating</th>
+                        <th>Academic</th>
+                        <th>Accommodation</th>
+                        <th>Faculty</th>
+                        <th>Infrastructure</th>
+                        <th>Placement</th>
+                        <th>Social Life</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for college in colleges %}
+                    <tr>
+                        <td>{{ college['College_Name'] }}</td>
+                        <td>{{ college['State'] }}</td>
+                        <td>{{ college['UG_fee'] }}</td>
+                        <td>{{ college['PG_fee'] }}</td>
+                        <td>{{ college['Rating'] }}</td>
+                        <td>{{ college['Academic'] }}</td>
+                        <td>{{ college['Accommodation'] }}</td>
+                        <td>{{ college['Faculty'] }}</td>
+                        <td>{{ college['Infrastructure'] }}</td>
+                        <td>{{ college['Placement'] }}</td>
+                        <td>{{ college['Social_Life'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No colleges found matching your criteria.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

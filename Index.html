@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Colleges</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>College Predictor</h1>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="College_Name">College Name :</label>
+                <input type="text" id="College_Name" name="College_Name" placeholder="Enter  the college name" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="State">State:</label>
+                <input type="text" id="State" name="State" placeholder="Enter state"><br>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Search College</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
